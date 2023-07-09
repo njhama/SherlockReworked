@@ -10,43 +10,6 @@ import secrets
 class SiteInformation:
     def __init__(self, name, url_home, url_username_format, username_claimed,
                 information, is_nsfw, username_unclaimed=secrets.token_urlsafe(10)):
-        """Create Site Information Object.
-
-        Contains information about a specific website.
-
-        Keyword Arguments:
-        self                   -- This object.
-        name                   -- String which identifies site.
-        url_home               -- String containing URL for home of site.
-        url_username_format    -- String containing URL for Username format
-                                  on site.
-                                  NOTE:  The string should contain the
-                                         token "{}" where the username should
-                                         be substituted.  For example, a string
-                                         of "https://somesite.com/users/{}"
-                                         indicates that the individual
-                                         usernames would show up under the
-                                         "https://somesite.com/users/" area of
-                                         the website.
-        username_claimed       -- String containing username which is known
-                                  to be claimed on website.
-        username_unclaimed     -- String containing username which is known
-                                  to be unclaimed on website.
-        information            -- Dictionary containing all known information
-                                  about website.
-                                  NOTE:  Custom information about how to
-                                         actually detect the existence of the
-                                         username will be included in this
-                                         dictionary.  This information will
-                                         be needed by the detection method,
-                                         but it is only recorded in this
-                                         object for future use.
-        is_nsfw                -- Boolean indicating if site is Not Safe For Work.
-
-        Return Value:
-        Nothing.
-        """
-
         self.name = name
         self.url_home = url_home
         self.url_username_format = url_username_format
@@ -59,58 +22,20 @@ class SiteInformation:
         return
 
     def __str__(self):
-        """Convert Object To String.
-
-        Keyword Arguments:
-        self                   -- This object.
-
-        Return Value:
-        Nicely formatted string to get information about this object.
-        """
         
         return f"{self.name} ({self.url_home})"
 
 
 class SitesInformation:
     def __init__(self, data_file_path=None):
-        """Create Sites Information Object.
-
-        Contains information about all supported websites.
-
-        Keyword Arguments:
-        self                   -- This object.
-        data_file_path         -- String which indicates path to data file.
-                                  The file name must end in ".json".
-
-                                  There are 3 possible formats:
-                                   * Absolute File Format
-                                     For example, "c:/stuff/data.json".
-                                   * Relative File Format
-                                     The current working directory is used
-                                     as the context.
-                                     For example, "data.json".
-                                   * URL Format
-                                     For example,
-                                     "https://example.com/data.json", or
-                                     "http://example.com/data.json".
-
-                                  An exception will be thrown if the path
-                                  to the data file is not in the expected
-                                  format, or if there was any problem loading
-                                  the file.
-
-                                  If this option is not specified, then a
-                                  default site list will be used.
-
-        Return Value:
-        Nothing.
-        """
-
         if not data_file_path:
             # The default data file is the live data.json which is in the GitHub repo. The reason why we are using
             # this instead of the local one is so that the user has the most up-to-date data. This prevents
             # users from creating issue about false positives which has already been fixed or having outdated data
-            data_file_path = "https://raw.githubusercontent.com/sherlock-project/sherlock/master/sherlock/resources/data.json"
+            print("grabbing from git")
+            #data_file_path = 'resources/data.json'
+            data_file_path = "https://raw.githubusercontent.com/njhama/SherlockReworked/main/sherlock/resources/data.json"
+            #data_file_path = "https://raw.githubusercontent.com/sherlock-project/sherlock/master/sherlock/resources/data.json"
 
         # Ensure that specified data file has correct extension.
         if not data_file_path.lower().endswith(".json"):
