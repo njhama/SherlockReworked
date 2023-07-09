@@ -631,13 +631,6 @@
     "urlMain": "https://community.eintracht.de/",
     "username_claimed": "mmammu"
   },
-  "Enjin": {
-    "errorMsg": "Yikes, there seems to have been an error. We've taken note and will check out the problem right away!",
-    "errorType": "message",
-    "url": "https://www.enjin.com/profile/{}",
-    "urlMain": "https://www.enjin.com/",
-    "username_claimed": "blue"
-  },
   "Envato Forum": {
     "errorType": "status_code",
     "url": "https://forums.envato.com/u/{}",
@@ -783,14 +776,6 @@
     "urlMain": "https://freesound.org/",
     "username_claimed": "blue"
   },
-  "G2G": {
-    "errorType": "response_url",
-    "errorUrl": "https://www.g2g.com/{}",
-    "regexCheck": "^[A-Za-z][A-Za-z0-9_]{2,11}$",
-    "url": "https://www.g2g.com/{}",
-    "urlMain": "https://www.g2g.com/",
-    "username_claimed": "user"
-  },
   "GNOME VCS": {
     "errorType": "response_url",
     "errorUrl": "https://gitlab.gnome.org/{}",
@@ -924,12 +909,6 @@
     "urlMain": "https://www.gumroad.com/",
     "username_claimed": "blue"
   },
-  "GunsAndAmmo": {
-    "errorType": "status_code",
-    "url": "https://forums.gunsandammo.com/profile/{}",
-    "urlMain": "https://gunsandammo.com/",
-    "username_claimed": "adam"
-  },
   "Gutefrage": {
     "errorType": "status_code",
     "url": "https://www.gutefrage.net/nutzer/{}",
@@ -1049,12 +1028,6 @@
     "url": "https://www.ifttt.com/p/{}",
     "urlMain": "https://www.ifttt.com/",
     "username_claimed": "blue"
-  },
-  "IRL": {
-    "errorType": "status_code",
-    "url": "https://www.irl.com/{}",
-    "urlMain": "https://www.irl.com/",
-    "username_claimed": "hacker"
   },
   "Icons8 Community": {
     "errorType": "status_code",
@@ -2315,12 +2288,6 @@
     "urlMain": "https://akniga.org/profile/blue/",
     "username_claimed": "blue"
   },
-  "authorSTREAM": {
-    "errorType": "status_code",
-    "url": "http://www.authorstream.com/{}/",
-    "urlMain": "http://www.authorstream.com/",
-    "username_claimed": "blue"
-  },
   "babyRU": {
     "errorMsg": "\u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430, \u043a\u043e\u0442\u043e\u0440\u0443\u044e \u0432\u044b \u0438\u0441\u043a\u0430\u043b\u0438, \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u0430",
     "errorType": "message",
@@ -2385,12 +2352,6 @@
     "url": "https://egpu.io/forums/profile/{}/",
     "urlMain": "https://egpu.io/",
     "username_claimed": "blue"
-  },
-  "ebio.gg": {
-    "errorType": "status_code",
-    "url": "https://ebio.gg/{}",
-    "urlMain": "https:/ebio.gg",
-    "username_claimed": "dev"
   },
   "eintracht": {
     "errorType": "status_code",
